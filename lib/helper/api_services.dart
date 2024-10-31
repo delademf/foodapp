@@ -49,8 +49,8 @@ class ApiService {
 
   Future<void> signUp(SignUpModel signUpmodel) async {
     var uri = Uri.parse(baseUrl);
-    var response =
-        await http.post(uri, headers: headers, body: signUpmodel.toJson());
+    var response = await http.post(uri,
+        headers: headers, body: jsonEncode(signUpmodel.toJson()));
     print("this is the response");
     print(response);
 
