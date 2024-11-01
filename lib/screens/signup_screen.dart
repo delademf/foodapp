@@ -99,7 +99,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                             filled: true,
                             fillColor: Colors.white,
-                            labelText: "First Name")),
+                            hintText: "First Name")),
 
                     const SizedBox(height: 22),
                     /////////////////////////////////////////////////////////////////
@@ -128,7 +128,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                             filled: true,
                             fillColor: Colors.white,
-                            labelText: "Last Name")),
+                            hintText: "Last Name")),
 
                     const SizedBox(height: 22),
                     /////////////////////////////////////////////////////////////////
@@ -141,6 +141,7 @@ class _SignUpState extends State<SignUp> {
                               fontSize: 13,
                               fontWeight: FontWeight.w500,
                               color: Colors.white),
+
                         ),
                       ],
                     ),
@@ -157,7 +158,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                             filled: true,
                             fillColor: Colors.white,
-                            labelText: "")),
+                            hintText: "Age")),
 
                     const SizedBox(height: 22),
                     /////////////////////////////////////////////////////////////////
@@ -186,7 +187,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                             filled: true,
                             fillColor: Colors.white,
-                            labelText: "name@example.com")),
+                            hintText: "name@example.com")),
                     const SizedBox(height: 22),
                     /////////////////////////////////////////////////////////
                     Row(
@@ -214,10 +215,22 @@ class _SignUpState extends State<SignUp> {
                             ),
                             filled: true,
                             fillColor: Colors.white,
-                            labelText: "Password")),
+                            hintText: "Password")),
                     const SizedBox(height: 22),
                     SizedBox(
                       height: 5,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Phone Number",
+                          style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white),
+                        ),
+                      ],
                     ),
                     TextField(
                         controller: phoneTextEditingController,
@@ -229,8 +242,11 @@ class _SignUpState extends State<SignUp> {
                             ),
                             filled: true,
                             fillColor: Colors.white,
-                            labelText: "Phone Number")),
-                    SizedBox(height: 10),
+                            hintText: "Phone Number")),
+                    SizedBox(height: 22),
+                     SizedBox(
+                      height: 5,
+                    ),
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                       //
                       ElevatedButton(
@@ -244,7 +260,13 @@ class _SignUpState extends State<SignUp> {
                               phoneNumber:
                                   int.parse(phoneTextEditingController.text),
                             );
-                            context.read<ApiService>().signUp(signUpmodel);
+                            // context.read<ApiService>().signUp(signUpmodel).then(val){
+                            //   return Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => MainScreen()),
+                            //   )
+                            // };
                             // Navigator.push(
                             //   context,
                             //   MaterialPageRoute(
@@ -272,6 +294,9 @@ class _SignUpState extends State<SignUp> {
                     ]),
 
                     SizedBox(height: 10),
+                     SizedBox(
+                      height: 5,
+                    ),
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

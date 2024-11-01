@@ -140,9 +140,18 @@ class _LogInState extends State<LogIn> {
 
                       ElevatedButton(
                         onPressed: () {
-                          context.read<ApiService>().authenticate(
-                              emailTextEditingController.text,
-                              passwordTextEditingController.text);
+                          context
+                              .read<ApiService>()
+                              .authenticate(emailTextEditingController.text,
+                                  passwordTextEditingController.text)
+                              .then((value) {
+
+                                Logger().d(value);
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MainScreen()));
+                          });
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(

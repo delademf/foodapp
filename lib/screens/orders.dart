@@ -10,6 +10,62 @@ class Orders extends StatefulWidget {
 class _OrdersState extends State<Orders> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+
+      body: Padding(
+        padding: EdgeInsets.all(0),
+        child: Stack(
+          children: [
+            
+              Positioned(
+                top: 30,
+                left: 30,
+                right: 30,
+
+                child: Container(
+                  height: 500,
+                  padding:EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: [BoxShadow( color: Colors.grey,blurRadius: 5),],
+                    borderRadius: BorderRadius.circular(20)
+                                
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 40,),
+                      Image.asset("",),
+                      SizedBox(height:80),
+                      Text('NO ORDER FOUND',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w900,),),
+                      Text("Looks like you haven't made your order yet",style: TextStyle(fontSize: 13,fontWeight: FontWeight.normal),)
+                    ],
+                  ),
+                ),
+              ), 
+
+              Padding(
+                padding: EdgeInsets.all(20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          width: 300,
+                              child: ElevatedButton(onPressed:(){},
+                              child: const Text('START YOUR ORDER',style: TextStyle(fontFamily: 'Nunito',fontSize: 15,fontWeight:FontWeight.w900,color: Colors.white),),
+                                  style: ElevatedButton.styleFrom(elevation: 10, backgroundColor: Color(0xFF31B2ED),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0))),
+                                  )
+                                  ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+        ),
+      )
+    );
   }
 }
