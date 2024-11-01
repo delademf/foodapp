@@ -1,5 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:third_proj/components/restaurant.dart';
+import 'package:third_proj/components/restaurant_card.dart';
 import 'package:third_proj/screens/chats.dart';
 import 'package:third_proj/screens/orders.dart';
 import 'package:third_proj/screens/profile.dart';
@@ -21,6 +23,15 @@ class _DashboardState extends State<Dashboard> {
         Profile()
   ];
 
+  List<Restaurant> restaurants= [];
+
+  @override
+  void initState() {
+    super.initState();
+    // Call your function here
+    // retrieveAllRestaurants(context);
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -226,57 +237,57 @@ class _DashboardState extends State<Dashboard> {
             ),
 SizedBox(height: 20,),
 
-            // Container(
-            //   child: ListView(
-            //     scrollDirection: Axis.horizontal,
-            //     children: [
-            //       Container(
-            //         width: 161,
-            //         height: 41,
-            //         color: Color(0xFF31B2ED),
-            //         child: Row(
-            //           children: [
-            //             Icon(Icons.fastfood,color: Colors.white,),
-            //             Text("Burgers",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
-            //           ],
-            //         )
-            //       ),
-            //       Container(
-            //          width: 161,
-            //         height: 41,
-            //         color: Color(0xFF31B2ED),
-            //         child: Row(
-            //           children: [
-            //             Icon(Icons.fastfood,color: Colors.white,),
-            //             Text("Burgers",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
-            //           ],
-            //         )
-            //       ),
-            //       Container(
-            //          width: 161,
-            //         height: 41,
-            //         color: Color(0xFF31B2ED),
-            //         child: Row(
-            //           children: [
-            //             Icon(Icons.fastfood,color: Colors.white,),
-            //             Text("Burgers",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
-            //           ],
-            //         )
-            //       ),
-            //       Container(
-            //          width: 161,
-            //         height: 41,
-            //         color: Color(0xFF31B2ED),
-            //         child: Row(
-            //           children: [
-            //             Icon(Icons.fastfood,color: Colors.white,),
-            //             Text("Burgers",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
-            //           ],
-            //         )
-            //       ),
-            //     ],
-            //   ),
-            // )
+            Container(
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(
+                    width: 161,
+                    height: 41,
+                    color: Color(0xFF31B2ED),
+                    child: Row(
+                      children: [
+                        Icon(Icons.fastfood,color: Colors.white,),
+                        Text("Burgers",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                      ],
+                    )
+                  ),
+                  Container(
+                     width: 161,
+                    height: 41,
+                    color: Color(0xFF31B2ED),
+                    child: Row(
+                      children: [
+                        Icon(Icons.fastfood,color: Colors.white,),
+                        Text("Burgers",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                      ],
+                    )
+                  ),
+                  Container(
+                     width: 161,
+                    height: 41,
+                    color: Color(0xFF31B2ED),
+                    child: Row(
+                      children: [
+                        Icon(Icons.fastfood,color: Colors.white,),
+                        Text("Burgers",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                      ],
+                    )
+                  ),
+                  Container(
+                     width: 161,
+                    height: 41,
+                    color: Color(0xFF31B2ED),
+                    child: Row(
+                      children: [
+                        Icon(Icons.fastfood,color: Colors.white,),
+                        Text("Burgers",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                      ],
+                    )
+                  ),
+                ],
+              ),
+            ),
 
             Container(
             child: Container(
@@ -374,7 +385,163 @@ SizedBox(height: 20,),
               ]
               )
               ),
-          )
+          ),
+
+          Container(
+                height:
+                    400, // Set a fixed height or use MediaQuery to make it responsive
+                    // decoration: BoxDecoration(
+                    //   borderRadius: BorderRadius.circular(10),
+                    //   color: Color(0xFF0E3F6),
+                    // ),
+                child: ListView.builder(
+                  itemCount: restaurants.length,
+                  itemBuilder: (context, index) {
+                    return RestaurantCard(
+                      restaurantName: restaurants[index].name,
+                      restaurantImage: restaurants[index].image,
+                      restaurantId: restaurants[index].id,
+                    );
+                  },
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+
+              Container(
+                child: Column(
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [Image.asset('assets/images/r1.jpg'),
+                    Container(
+                      decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(8)),
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+                      child: Text('BURGER',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
+                    ]),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset("assets/images/like-shapes.png"),
+                        Text(
+                          '97%',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w600),
+                        )
+                      ],
+                    ),
+
+                    Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [Image.asset('assets/images/r4.jpg'),
+                    Container(
+                      decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(8)),
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 25),
+                      child: Text('McDonalds',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
+                    ]),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset("assets/images/like-shapes.png"),
+                        Text(
+                          '98%',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w600),
+                        )
+                      ],
+                    ),
+                    
+                    Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [Image.asset('assets/images/r2.jpg'),
+                    Container(
+                      decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(8)),
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+                      child: Text('BBQ',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
+                    ]),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset("assets/images/like-shapes.png"),
+                        Text(
+                          '92%',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w600),
+                        )
+                      ],
+                    ),
+                    
+                    Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [Image.asset('assets/images/r4.jpg'),
+                    Container(
+                      decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(8)),
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+                      child: Text('VEGAN',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
+                    ]),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset("assets/images/like-shapes.png"),
+                        Text(
+                          '75%',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w600),
+                        )
+                      ],
+                    ),
+
+                    Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [Image.asset('assets/images/r5.jpg'),
+                    Container(
+                      decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(8)),
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+                      child: Text('AMALA',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
+                    ]),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset("assets/images/like-shapes.png"),
+                        Text(
+                          '94%',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w600),
+                        )
+                      ],
+                    ),
+
+
+                    Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [Image.asset('assets/images/restaurant6.jpg'),
+                    Container(
+                      decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(8)),
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+                      child: Text('RICE',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
+                    ]),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset("assets/images/like-shapes.png"),
+                        Text(
+                          '98%',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w600),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              )
 
             
 
@@ -389,6 +556,61 @@ SizedBox(height: 20,),
 
 
 
+
+
+// Future<bool> retrieveAllRestaurants(BuildContext context) async {
+//     //create uri
+//     var uri = Uri.parse("https://c8aa-196-61-37-18.ngrok-free.app/restaurant/find-all-restaurants");
+//     //header
+//    Map<String, String> header = {"Content-Type": "application/json"};
+
+//     var response = await http.post(uri, headers: header);
+
+//     List jsonResponse = json.decode(response.body);
+
+//     var restaurantList = jsonResponse
+//         .map((restaurant) => Restaurant.fromJson(restaurant))
+//         .toList();
+
+//     // // Update state to trigger a rebuild
+//     // setState(() {
+//     //   restaurants = restaurantList;
+//     // });
+
+
+//     for (var restaurant in restaurants) {
+//       print(restaurant.name);
+//     }
+//     //print the response body
+//     print("${response.body}");
+//     print("hello......................................................................................");
+
+
+//     // if (response.statusCode == 200) {
+//     //   Navigator.pushNamed(context, '/dashboard');
+
+//     //   // Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard()));
+//     // } else {
+//     //   print('Request failed with status: ${response.statusCode}.');
+//     // }
+
+//     // if (response.body.contains('token')) {
+//     //   print("registered");
+//     //   displayToastMessage("You are logged in", context);
+//     //   userEmail = '$email';
+//     //   print("Your email is " + userEmail);
+//     //   Navigator.pushNamedAndRemoveUntil(
+//     //       context as BuildContext, MainScreen.idScreen, (route) => false);
+//     //   return true;
+//     // } else {
+//     //   print("null not registered");
+//     //   displayToastMessage("Account does not exist", context);
+//     //   Navigator.pop(context);
+//     //   return false;
+//     // }
+
+//     return true;
+//   }
 
 
 // logger.d('Log message with 2 methods');

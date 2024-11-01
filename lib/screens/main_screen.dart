@@ -60,10 +60,10 @@ class _MainScreenState extends State<MainScreen> {
           ),
           NavigationDestination(
             selectedIcon:
-                Icon(Icons.shopping_cart, color: Color(0xFF31B2ED),),
+                Icon(Icons.search, color: Color(0xFF31B2ED),),
             icon: Icon(Icons.chat_outlined,
                 color: Colors.white),
-            label: 'Chats',
+            label: 'Search',
 
           ),
           NavigationDestination(
