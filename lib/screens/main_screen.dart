@@ -23,8 +23,10 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       
       backgroundColor: Colors.white,
-      bottomNavigationBar: NavigationBar(
+      bottomNavigationBar:NavigationBar(
 
+        indicatorShape: CircleBorder(side: BorderSide(color: Colors.white),),
+        labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
         backgroundColor: Color(0xFF31B2ED),
         onDestinationSelected: (int index) {
           setState(() {

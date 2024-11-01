@@ -161,7 +161,9 @@ class _DashboardState extends State<Dashboard> {
           children: [
             
             TextField(
+
                         decoration: InputDecoration(
+                          
                             filled: true,
                             fillColor: Color(0xFF31B2ED),
                             prefixIcon: Icon(
@@ -171,13 +173,13 @@ class _DashboardState extends State<Dashboard> {
                             border: OutlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Color(0xFF31B2ED), width: 2),
-                                borderRadius: BorderRadius.all(Radius.circular(10))),
+                                borderRadius: BorderRadius.all(Radius.circular(15))),
                             hintText: "Search for a vendor or product",hintStyle: TextStyle(color: Colors.white))),
             
             SizedBox(height: 10,),
 
             CarouselSlider(
-              options: CarouselOptions(height: 200.0,
+              options: CarouselOptions(height: 150.0,
               autoPlayInterval: Duration(seconds: 3),
               autoPlay: true,),
               items:[
@@ -188,7 +190,7 @@ class _DashboardState extends State<Dashboard> {
                       width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.symmetric(horizontal: 5.0),
                       
-                      child: Image.asset("assets/images/foodAd2.jpg",fit: BoxFit.fill,),
+                      child: Image.asset("assets/images/burgerAd.png",fit: BoxFit.fill,),
 
                     ),
                     Container(
@@ -198,7 +200,7 @@ class _DashboardState extends State<Dashboard> {
                       width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.symmetric(horizontal: 5.0),
                       
-                      child: Image.asset("assets/images/foodAd3.jpg",fit: BoxFit.fill,),
+                      child: Image.asset("assets/images/burgerAd.png",fit: BoxFit.fill,),
 
                     ),
                     Container(
@@ -208,7 +210,7 @@ class _DashboardState extends State<Dashboard> {
                       width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.symmetric(horizontal: 5.0),
                       
-                      child: Image.asset("assets/images/foodAd4.jpg",fit: BoxFit.fill,),
+                      child: Image.asset("assets/images/burgerAd.png",fit: BoxFit.fill,),
 
                     ),
                     Container(
@@ -218,7 +220,7 @@ class _DashboardState extends State<Dashboard> {
                       width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.symmetric(horizontal: 5.0),
                       
-                      child: Image.asset("assets/images/foodAd5.jpg",fit: BoxFit.fill,),
+                      child: Image.asset("assets/images/burgerAd.png",fit: BoxFit.fill,),
 
                     ),
               ]
@@ -288,34 +290,16 @@ SizedBox(height: 20,),
             // This next line does the trick.
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              Container(
-                width: 161,
-                height: 41,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: Color(0xFF31B2ED),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('assets/images/burger.png'),
-                      SizedBox(height: 10,),
-                      Text('Burger',style: TextStyle(fontWeight: FontWeight.normal,fontFamily: 'Nunito',fontSize: 18,color: Colors.white),),
-                  
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(width: 20,),
-              Container(
-                width: 161,
-                height: 20,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: Color(0xFF31B2ED),
-                ),
+              ElevatedButton(onPressed: () {
+                
+              },
+              style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFF31B2ED),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        )
+
+                      ),
                 child: Padding(
                   padding: const EdgeInsets.all(8),
                   child: Row( 
@@ -324,57 +308,61 @@ SizedBox(height: 20,),
                       Image.asset('assets/images/burger.png',),
                       SizedBox(height: 10,),
                       Text('Burger',style: TextStyle(fontWeight: FontWeight.normal,fontFamily: 'Nunito',fontSize: 18,color: Colors.white),),
-                  
                     ],
                   ),
                 ),
               ),
               SizedBox(width: 20,),
-              Container(
-                width: 161,
-                height: 41,
-                  decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: Color(0xFF31B2ED),
-                ),                child: Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('assets/images/burger.png'),
-                      SizedBox(height: 10,),
-                      Text('Burger',style: TextStyle(fontWeight: FontWeight.normal,fontFamily: 'Nunito',fontSize: 18,color: Colors.white),),
-                  
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(width: 20,),
-              Container(
-                width: 161,
-                height: 41,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: Color(0xFF31B2ED),
-                ),
+              ElevatedButton(onPressed: () {
+                
+              },
+              style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFF31B2ED),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        )
+
+                      ),
                 child: Padding(
                   padding: const EdgeInsets.all(8),
-                  child: Row(
+                  child: Row( 
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset('assets/images/burger.png'),
+                      Image.asset('assets/images/Pizza.png',width:40,fit: BoxFit.cover,),
                       SizedBox(height: 10,),
-                      Text('Burger',style: TextStyle(fontWeight: FontWeight.normal,fontFamily: 'Nunito',fontSize: 18,color: Colors.white),),
-                  
+                      Text('Pizza',style: TextStyle(fontWeight: FontWeight.normal,fontFamily: 'Nunito',fontSize: 18,color: Colors.white),),
                     ],
                   ),
                 ),
               ),
-              
+              SizedBox(width: 20,),
+              ElevatedButton(onPressed: () {
+                
+              },
+              style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFF31B2ED),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        )
+
+                      ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Row( 
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/images/sandwich_icon.png',),
+                      SizedBox(height: 10,),
+                      Text('Sandwhich',style: TextStyle(fontWeight: FontWeight.normal,fontFamily: 'Nunito',fontSize: 18,color: Colors.white),),
+                    ],
+                  ),
+                ),
+              ),
               ]
               )
               ),
           ),
+          SizedBox(height: 20,),
  Container(
   height: 400,
                 child: SingleChildScrollView(
@@ -499,7 +487,7 @@ SizedBox(height: 20,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Image.asset("assets/images/r2.jpg"),
+                          Image.asset("assets/images/like-shapes.png"),
                           Text(
                             '98%',
                             style: TextStyle(
