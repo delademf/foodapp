@@ -53,15 +53,15 @@ class _MainScreenState extends State<MainScreen> {
           ),
           NavigationDestination(
             selectedIcon:
-                Icon(Icons.search, color: Color(0xFF31B2ED),),
-            icon: Icon(Icons.shopping_bag_outlined,
+                Icon(Icons.shopping_cart_checkout, color: Color(0xFF31B2ED),),
+            icon: Icon(Icons.shopping_cart_checkout,
                 color: Colors.white),
             label: 'Orders',
           ),
           NavigationDestination(
             selectedIcon:
                 Icon(Icons.search, color: Color(0xFF31B2ED),),
-            icon: Icon(Icons.chat_outlined,
+            icon: Icon(Icons.search,
                 color: Colors.white),
             label: 'Search',
 
