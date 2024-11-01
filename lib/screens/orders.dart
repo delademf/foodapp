@@ -12,10 +12,67 @@ class _OrdersState extends State<Orders> {
   Widget build(BuildContext context) {
     return Scaffold(
 
+      appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color(0xFF31B2ED),
+                  
+                ),
+                child: IconButton(
+                  icon: const Icon(
+                    Icons.menu,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer();
+                  },
+                  tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+                ),
+              ),
+            );
+          },
+        ),
+        automaticallyImplyLeading: true,
+        title: Column(
+          children: [
+           
+          ],
+        ),
+        
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Color(0xFF31B2ED),
+              ),
+              child: IconButton(
+                icon: Icon(
+                  Icons.shopping_cart,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/Order');
+                },
+              ),
+            ),
+          )
+        ],
+      ),
+
       body: Padding(
         padding: EdgeInsets.all(0),
         child: Stack(
           children: [
+            
             
               Positioned(
                 top: 30,

@@ -382,12 +382,12 @@ SizedBox(height: 20,),
                     children: [
                       Stack(
                         alignment: AlignmentDirectional.center,
-                        children: [Image.asset('assets/images/foodAd4.jpg'),
+                        children: [Image.asset('assets/images/r2.jpg'),
                       Container(
                         decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(8)),
                         padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
-                        child: Text('BURGER',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
+                        child: Text('KFC',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
                       ]),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -403,7 +403,7 @@ SizedBox(height: 20,),
                   
                       Stack(
                         alignment: AlignmentDirectional.center,
-                        children: [Image.asset('assets/images/foodAd4.jpg'),
+                        children: [Image.asset('assets/images/r1.jpg'),
                       Container(
                         decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(8)),
@@ -425,12 +425,12 @@ SizedBox(height: 20,),
                       
                       Stack(
                         alignment: AlignmentDirectional.center,
-                        children: [Image.asset('assets/images/foodAd4.jpg'),
+                        children: [Image.asset('assets/images/r1.jpg'),
                       Container(
                         decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(8)),
                         padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
-                        child: Text('BBQ',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
+                        child: Text('Currys',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
                       ]),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -446,12 +446,12 @@ SizedBox(height: 20,),
                       
                       Stack(
                         alignment: AlignmentDirectional.center,
-                        children: [Image.asset('assets/images/foodAd4.jpg'),
+                        children: [Image.asset('assets/images/r3.jpg'),
                       Container(
                         decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(8)),
                         padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
-                        child: Text('VEGAN',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
+                        child: Text('Posh Foods',style: TextStyle(fontSize: 14,color:Colors.white,fontWeight: FontWeight.w800)))
                       ]),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -467,7 +467,7 @@ SizedBox(height: 20,),
                   
                       Stack(
                         alignment: AlignmentDirectional.center,
-                        children: [Image.asset('assets/images/r5.jpg'),
+                        children: [Image.asset('assets/images/r4.jpg'),
                       Container(
                         decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(8)),
@@ -489,7 +489,7 @@ SizedBox(height: 20,),
                   
                       Stack(
                         alignment: AlignmentDirectional.center,
-                        children: [Image.asset('assets/images/restaurant6.jpg'),
+                        children: [Image.asset('assets/images/r2.jpg'),
                       Container(
                         decoration: BoxDecoration(color: Colors.black.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(8)),
@@ -499,7 +499,7 @@ SizedBox(height: 20,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Image.asset("assets/images/like-shapes.png"),
+                          Image.asset("assets/images/r2.jpg"),
                           Text(
                             '98%',
                             style: TextStyle(
