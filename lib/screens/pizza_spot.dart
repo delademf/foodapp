@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class BurgerSpot extends StatefulWidget {
-  const BurgerSpot({super.key});
+class PizzaSpot extends StatefulWidget {
+  const PizzaSpot({super.key});
 
   @override
-  State<BurgerSpot> createState() => _BurgerSpotState();
+  State<PizzaSpot> createState() => _PizzaSpotState();
 }
 
-class _BurgerSpotState extends State<BurgerSpot> {
+class _PizzaSpotState extends State<PizzaSpot> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +16,7 @@ class _BurgerSpotState extends State<BurgerSpot> {
         child: Column(
           children: [
             Stack(
-              children: [Image.asset('assets/images/main_all.jpg'),
+              children: [Image.asset('assets/images/pizza_spot.jpg'),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 50,horizontal: 15),
                   child: Container(
@@ -62,14 +62,14 @@ class _BurgerSpotState extends State<BurgerSpot> {
                         ),
                         IconButton(onPressed: (){
                           Navigator.pushNamed(context, '/location');
-                        }, icon: Icon(Icons.location_on_rounded,color: Color(0xFF31B2ED)))
+                        }, icon: Icon(Icons.location_on_rounded,color: Color(0xFF31B2ED))),
                       ],
                     ),
                     SizedBox(height: 20,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text("Chicken Burger",style: TextStyle(fontSize: 28),),
+                        Text("Beef Pizza",style: TextStyle(fontSize: 28),),
                       ],
                     ),
                     Row(
@@ -79,17 +79,18 @@ class _BurgerSpotState extends State<BurgerSpot> {
                       ],
                     ),
                     Text("""
-Cluckin’ Good Deal! 🍔🐔
-Get ready for the ultimate chicken burger experience! Dive into juicy, crispy, and oh-so-flavorful bites with our *Chicken Burger Promo Pack*. Perfect for those times when one burger just isn’t enough!
+Pizza Lovers’ Paradise! 🍕🔥
+
+Prepare yourself for a pizza feast like no other with our *Pizza Promo Pack*! Loaded with all the cheesy, saucy goodness you crave, this pack is a true slice of heaven for all pizza fans out there!
 
 What’s Inside:
-- 2 Premium Chicken Burgers - Each crafted with a tender, seasoned chicken fillet, fresh lettuce, ripe tomatoes, and our signature creamy sauce on a toasted bun.
-- Golden Fries - Crispy on the outside, fluffy on the inside – the ideal sidekick!
-- Refreshing Drink - Choose from a selection of refreshing beverages to complete your meal!
+- 2 Large Signature Pizzas - Choose from a variety of our best-selling flavors, each topped with a perfect blend of cheeses, fresh veggies, and premium meats on our signature crispy crust.
+- Garlic Breadsticks - Warm, soft, and loaded with garlic butter goodness – the ideal complement to every slice.
+- Refreshing Drink - Pick from our range of beverages to cool down as you enjoy every delicious bite!
 
-This pack is perfect for sharing or enjoying solo – because two burgers are always better than one! Don’t miss out on this unbeatable deal – *limited time only*!
+Perfect for a group hangout or a solo pizza night – because with two pizzas, there’s plenty to share (or not)! Don’t miss this fantastic deal – *available for a limited time only*!
 
-Grab your Chicken Burger Promo Pack today!
+Order your Pizza Promo Pack now and treat yourself to a pizza paradise!
                     """)
                   ],
                 ),

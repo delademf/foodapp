@@ -11,27 +11,48 @@ class _ChatsState extends State<Chats> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-         title: Text("                Search",style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
-      ),           
+               
       body: Padding(
         padding: const EdgeInsets.all(10),
+        
         child: Column(
           children: [
-            TextField(
+            Padding(
+                padding: const EdgeInsets.only(left: 1,top: 40),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                          decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: Color(0xFF31B2ED)              )
+                        ,child: IconButton(onPressed:(){
+                          Navigator.pushNamed(context, "/Mainscreen");
+                        }, icon: Icon(Icons.arrow_back_ios,color: Colors.white,) )),
+
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 70),
+                          child: Text("Search", style: TextStyle(color: Color(0xFF31B2ED),fontSize: 20),),
+                        )
+                  ],
+                ),
+              ),
+
+          SizedBox(height: 15,),
+           TextField(
                         decoration: InputDecoration(
                             filled: true,
-                            fillColor: Color(0xFF0E3F6),
+                            fillColor: Color(0xFF31B2ED),
                             prefixIcon: Icon(
                               Icons.search,
-                              color: Colors.grey,
+                              color: Colors.white,
                             ),
                             border: OutlineInputBorder(
                                 borderSide:
-                                    BorderSide(color: Color(0xFF9139BA), width: 2),
-                                borderRadius: BorderRadius.all(Radius.circular(30))),
-                            hintText: "Search for a vendor or product",hintStyle: TextStyle(color: Colors.grey))),
+                                    BorderSide(color: Color(0xFF31B2ED), width: 2),
+                                borderRadius: BorderRadius.all(Radius.circular(15))),
+                            hintText: "Search for a vendor or product",hintStyle: TextStyle(color: Colors.white))),
+            
             SizedBox(height: 7,),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),

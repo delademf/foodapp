@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class BurgerSpot extends StatefulWidget {
-  const BurgerSpot({super.key});
+class SandwichSpot extends StatefulWidget {
+  const SandwichSpot({super.key});
 
   @override
-  State<BurgerSpot> createState() => _BurgerSpotState();
+  State<SandwichSpot> createState() => _SandwichSpotState();
 }
 
-class _BurgerSpotState extends State<BurgerSpot> {
+class _SandwichSpotState extends State<SandwichSpot> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +16,7 @@ class _BurgerSpotState extends State<BurgerSpot> {
         child: Column(
           children: [
             Stack(
-              children: [Image.asset('assets/images/main_all.jpg'),
+              children: [Image.asset('assets/images/sandwich_spot.jpg'),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 50,horizontal: 15),
                   child: Container(
@@ -60,16 +60,14 @@ class _BurgerSpotState extends State<BurgerSpot> {
                             child: Text("Popular",style: TextStyle(color: Colors.white),),
                           ),
                         ),
-                        IconButton(onPressed: (){
-                          Navigator.pushNamed(context, '/location');
-                        }, icon: Icon(Icons.location_on_rounded,color: Color(0xFF31B2ED)))
+                        Icon(Icons.location_on_rounded,color: Color(0xFF31B2ED),)
                       ],
                     ),
                     SizedBox(height: 20,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text("Chicken Burger",style: TextStyle(fontSize: 28),),
+                        Text("Chicken Sandwich",style: TextStyle(fontSize: 28),),
                       ],
                     ),
                     Row(
@@ -79,17 +77,18 @@ class _BurgerSpotState extends State<BurgerSpot> {
                       ],
                     ),
                     Text("""
-Cluckin’ Good Deal! 🍔🐔
-Get ready for the ultimate chicken burger experience! Dive into juicy, crispy, and oh-so-flavorful bites with our *Chicken Burger Promo Pack*. Perfect for those times when one burger just isn’t enough!
+Stacked Sandwich Deal! 🥪✨
+
+Brace yourself for the ultimate sandwich experience with our *Stacked Sandwich Deal*! Packed with layers of fresh, flavorful ingredients, this deal is a must-try for sandwich lovers everywhere!
 
 What’s Inside:
-- 2 Premium Chicken Burgers - Each crafted with a tender, seasoned chicken fillet, fresh lettuce, ripe tomatoes, and our signature creamy sauce on a toasted bun.
-- Golden Fries - Crispy on the outside, fluffy on the inside – the ideal sidekick!
-- Refreshing Drink - Choose from a selection of refreshing beverages to complete your meal!
+- 2 Gourmet Sandwiches - Choose from our selection of mouth-watering options, each crafted with artisan bread, fresh veggies, and premium meats and cheeses.
+- Crispy Side Snack - Golden chips or a fresh side salad to pair perfectly with your sandwich.
+- Refreshing Drink - Select from a range of beverages to complete your meal and keep you energized!
 
-This pack is perfect for sharing or enjoying solo – because two burgers are always better than one! Don’t miss out on this unbeatable deal – *limited time only*!
+Perfect for lunch, dinner, or any time in between! Grab a friend or enjoy it solo – this deal won’t be around forever, so make it yours while it lasts!
 
-Grab your Chicken Burger Promo Pack today!
+Order your Stacked Sandwich Deal* today and dive into sandwich perfection!
                     """)
                   ],
                 ),

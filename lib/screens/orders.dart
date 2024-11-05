@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class Orders extends StatefulWidget {
   const Orders({super.key});
@@ -11,7 +12,7 @@ class _OrdersState extends State<Orders> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+backgroundColor: Colors.white,
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -89,10 +90,11 @@ class _OrdersState extends State<Orders> {
                                 
                   ),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(height: 40,),
-                      Image.asset("",),
-                      SizedBox(height:80),
+                      Lottie.asset("assets/images/no_order_yet.json",width: 200,height: 200),
+                      SizedBox(height:10),
                       Text('NO ORDER FOUND',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w900,),),
                       Text("Looks like you haven't made your order yet",style: TextStyle(fontSize: 13,fontWeight: FontWeight.normal),)
                     ],
